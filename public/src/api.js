@@ -1,4 +1,4 @@
-import { CONFIG } from '../config.js';
+import { CONFIG } from './config.js';
 
 export async function login(username) {
   const response = await fetch(`${CONFIG.SUPABASE_URL}/rest/v1/users?username=eq.${username}`, {
