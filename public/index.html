@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>REX Learn - Sherwin-Williams Training</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>🎨 REX Learn</h1>
+      <p>Master Sherwin-Williams REX Numbers</p>
+    </header>
+
+    <div class="login-section">
+      <h2>Welcome Back!</h2>
+      <input type="text" id="username" placeholder="Enter your username">
+      <button id="loginBtn">Start Learning</button>
+    </div>
+
+    <nav class="nav-links hidden" id="navLinks">
+      <a href="quiz.html">Quiz</a>
+      <a href="insights.html">Insights</a>
+      <a href="profile.html">Profile</a>
+    </nav>
+  </div>
+
+  <script type="module">
+    import { login } from '../src/api.js';
+
+    document.getElementById('loginBtn').addEventListener('click', async () => {
+      const username = document.getElementById('username').value;
+      if (username) {
+        const userId = await login(username);
+        localStorage.setItem('userId', userId);
+        localStorage.setItem('username', username);
+        document.getElementById('navLinks').classList.remove('hidden');
+      }
+    });
+  </script>
+</body>
+</html>

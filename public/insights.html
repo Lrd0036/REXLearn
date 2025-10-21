@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Insights - REX Learn</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Your Learning Insights</h1>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="quiz.html">Quiz</a>
+        <a href="profile.html">Profile</a>
+      </nav>
+    </header>
+
+    <button id="generateInsightsBtn">Generate AI Insights</button>
+    <div id="insightsDisplay" class="insights-box"></div>
+    <div class="loading hidden" id="loading">Analyzing your progress...</div>
+  </div>
+
+  <script type="module" src="../src/insights.js"></script>
+</body>
+</html>
