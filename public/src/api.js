@@ -52,7 +52,8 @@ const response = await fetch(`${CONFIG.SUPABASE_URL}/functions/v1/submit-quiz-re
 }
 
 export async function getUserStats(userId) {
-  const response = await fetch(`${CONFIG.SUPABASE_URL}/functions/v1/get-user-stats`, {
+  // AFTER (for example)
+  const response = await fetch(`${CONFIG.SUPABASE_URL}/functions/v1/get-user-statistics`, {
     method: 'POST',
     headers: {
       'Authorization': `Bearer ${CONFIG.SUPABASE_ANON_KEY}`,
