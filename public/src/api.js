@@ -39,7 +39,8 @@ export async function fetchProducts() {
 }
 
 export async function submitQuizAttempt(userId, rexNumber, correct, attemptsUsed) {
-  const response = await fetch(`${CONFIG.SUPABASE_URL}/functions/v1/submit-quiz-attempt`, {
+  // AFTER
+const response = await fetch(`${CONFIG.SUPABASE_URL}/functions/v1/submit-quiz-results`, {
     method: 'POST',
     headers: {
       'Authorization': `Bearer ${CONFIG.SUPABASE_ANON_KEY}`,
